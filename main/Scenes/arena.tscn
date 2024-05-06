@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4i6hks13307e"]
+
+[ext_resource type="Texture2D" uid="uid://b1dqq6puro4yu" path="res://Graphics/ScrapyardArena.png" id="1_jca4p"]
+
+[node name="Arena" type="Node2D"]
+z_index = -10
+
+[node name="ScrapyardArena" type="Sprite2D" parent="."]
+position = Vector2(645, 365)
+texture = ExtResource("1_jca4p")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(640, 264)
+scale = Vector2(2, 2)
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-318.5, 89.5, -188, 72, -84, 72, -76, 76, -56, 68, 68, 68, 76, 76, 88, 72, 140, 72, 192, 76, 324, 88, 324, 232, -320, 232, -320, 264, 352, 264, 352, 44, -356, 44, -356, 264, -320, 264)

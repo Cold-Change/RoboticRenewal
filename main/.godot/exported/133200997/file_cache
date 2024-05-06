@@ -1,0 +1,13 @@
+res://Resources/DefaultEnemyMovementData.tres::ce1a9f5f8d488b5749a3f8e8b74a7a51::1710965175::res://.godot/exported/133200997/export-a1b3a9e97f4e8b92c5435f29e098881f-DefaultEnemyMovementData.res
+res://Resources/DefaultPlayerMovementData.tres::8b434807b2f5c1d775780b7799c2bdc1::1710557404::res://.godot/exported/133200997/export-4bb520ac641feb296cda5b02eabf3b6a-DefaultPlayerMovementData.res
+res://Resources/FastPlayerMovementData.tres::5112f13148fac57ad10063d770dd0c29::1710557404::res://.godot/exported/133200997/export-b0458bef16e75454930750a76188d8ed-FastPlayerMovementData.res
+res://Scenes/arena.tscn::2c9a93a0164b3d8e89acce2424767e43::1710970367::res://.godot/exported/133200997/export-89be3d629663e38055291e0127327462-arena.scn
+res://Scenes/Roomie.tscn::1be896cc9e0e4f0718dcd5023adff5b5::1710970367::res://.godot/exported/133200997/export-30bc94e1773ff9f1524a6aa41c62568a-Roomie.scn
+res://Scenes/world.tscn::2437629c7e45e6ffa1bf008ca4118074::1710971914::res://.godot/exported/133200997/export-0271e18ecf37a36b455ad0b215994549-world.scn
+res://Theme/DarkGrey9Slice.tres::9edbc364288c42d968fdda00d9bac2f9::1710897604::res://.godot/exported/133200997/export-79923872f31ce3e0878d16ed6ef4c588-DarkGrey9Slice.res
+res://Theme/DefaultTheme.tres::64521a9f0282f79d1b2d3ce33d9f7e99::1710938404::res://.godot/exported/133200997/export-bdf61c21b6bde2fc9ac10c4a0eddd277-DefaultTheme.res
+res://Theme/Grey9Slice.tres::84383fc3d3983cf48588f2491d5dd4b8::1710896881::res://.godot/exported/133200997/export-d5e53b66bb0111a772087b17f921018f-Grey9Slice.res
+res://Transitions/level_transition.tscn::89bbd85437ac5aac92b462983908539c::1710907554::res://.godot/exported/133200997/export-6487c05d1777ca6ecffcbeb435bf6a4b-level_transition.scn
+res://Views/TitleView.tscn::056a5eee49aa322fe3022451ad2c266e::1710970367::res://.godot/exported/133200997/export-bece12a7b9d4179a01f5767156ee8779-TitleView.scn
+res://Scenes/Enemy.tscn::1e77d4c0bcaf8a21d0e39c56971ec1d8::1710970367::res://.godot/exported/133200997/export-b62ce0eb0da9366804eacfbf851dbe37-Enemy.scn
+res://Views/intro_cutscene.tscn::ead64884696dac91af77da2103581ace::1710970367::res://.godot/exported/133200997/export-48f9b5e603ce9ab61e968f78892caf89-intro_cutscene.scn

@@ -1,0 +1,5 @@
+-Frames 1-48 are a single attack with endlag returning to stock idle pose
+
+-Frame 49-89  is a transition from the first attack into a second hit (Transition would start at frame 24) with endlag for the second attack returning to stock idle pose
+
+-Frame 90 - 119 is a loop of the second attack, if you would wish to allow that. (Loop matches with frame 56)

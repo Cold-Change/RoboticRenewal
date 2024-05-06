@@ -1,0 +1,234 @@
+[gd_scene load_steps=7 format=3 uid="uid://mfip5584vtgb"]
+
+[ext_resource type="Script" path="res://Scenes/world.gd" id="1_lnvkw"]
+[ext_resource type="PackedScene" uid="uid://d4i6hks13307e" path="res://Scenes/arena.tscn" id="1_mjoc8"]
+[ext_resource type="PackedScene" uid="uid://doe8yovnbf0lf" path="res://Scenes/Enemy.tscn" id="3_nbmf1"]
+[ext_resource type="PackedScene" uid="uid://dkbkg18ddhvds" path="res://Scenes/Roomie.tscn" id="5_fd1n6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_risbj"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.317647, 0.317647, 0.317647, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ac4n"]
+bg_color = Color(0.933333, 0.219608, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.317647, 0.317647, 0.317647, 0.317647)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="World" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_lnvkw")
+
+[node name="Arena" parent="." instance=ExtResource("1_mjoc8")]
+
+[node name="Roomie" parent="." instance=ExtResource("5_fd1n6")]
+position = Vector2(656, 469)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(0.994, 0.994)
+
+[node name="Enemy" parent="." instance=ExtResource("3_nbmf1")]
+position = Vector2(930, 464)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_nbmf1")]
+position = Vector2(846, 621)
+
+[node name="Enemy3" parent="." instance=ExtResource("3_nbmf1")]
+position = Vector2(1156, 540)
+
+[node name="Enemy4" parent="." instance=ExtResource("3_nbmf1")]
+position = Vector2(298, 556)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthBar" type="ProgressBar" parent="UI"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 682.0
+offset_right = 283.0
+offset_bottom = 710.0
+theme_override_styles/background = SubResource("StyleBoxFlat_risbj")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3ac4n")
+value = 100.0
+show_percentage = false
+
+[node name="HealthBarLabel" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 653.0
+offset_right = 192.0
+offset_bottom = 674.0
+text = "HEALTH"
+
+[node name="JabLabel" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 689.0
+offset_right = 462.0
+offset_bottom = 710.0
+text = "Press \"J\" to jab"
+
+[node name="MovmentLabel" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 662.0
+offset_right = 462.0
+offset_bottom = 683.0
+text = "Use \"WASD\" to move"
+
+[node name="MovmentLabel2" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 533.0
+offset_right = 221.0
+offset_bottom = 554.0
+text = "\"E\" to spawn enemies"
+
+[node name="MovmentLabel3" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 571.0
+offset_right = 240.0
+offset_bottom = 592.0
+text = "\"R\" to change arm"
+
+[node name="MovmentLabel4" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 606.0
+offset_right = 240.0
+offset_bottom = 627.0
+text = "\"T\" to change legs"
+
+[node name="ChainsawLabel" type="Label" parent="UI"]
+visible = false
+layout_mode = 0
+offset_left = 483.0
+offset_top = 690.0
+offset_right = 803.0
+offset_bottom = 711.0
+text = "Press \"K\" to use your chainsaw"
+
+[node name="KnifeLabel" type="Label" parent="UI"]
+visible = false
+layout_mode = 0
+offset_left = 483.0
+offset_top = 690.0
+offset_right = 761.0
+offset_bottom = 711.0
+text = "Press \"K\" to use your knife"
+
+[node name="WheelsLabel" type="Label" parent="UI"]
+visible = false
+layout_mode = 0
+offset_left = 511.0
+offset_top = 664.0
+offset_right = 927.0
+offset_bottom = 685.0
+text = "Hold \"Shift\" to speed up with your wheels"
+
+[node name="GameOver" type="Control" parent="."]
+process_mode = 3
+visible = false
+z_index = 10
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="GameOver"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 250
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 250
+theme_override_constants/margin_bottom = 150
+
+[node name="Panel" type="Panel" parent="GameOver/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameOver/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 48
+text = "GAME OVER
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameOver/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 16
+
+[node name="Menu" type="Button" parent="GameOver/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "TITLE SCREEN"
+
+[node name="Quit" type="Button" parent="GameOver/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "QUIT"
+
+[node name="WaveTimer" type="Timer" parent="."]
+wait_time = 30.0
+autostart = true
+
+[node name="WaveLabel" type="Label" parent="WaveTimer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -437.5
+offset_top = -23.0
+offset_right = 437.5
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 36
+text = "Renew yourself and get ready to fight"
+
+[node name="TimeLabel" type="Label" parent="WaveTimer"]
+offset_left = 82.0
+offset_top = 65.0
+offset_right = 229.0
+offset_bottom = 111.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "0"
+
+[connection signal="pressed" from="GameOver/MarginContainer/HBoxContainer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="GameOver/MarginContainer/HBoxContainer/Quit" to="." method="_on_quit_pressed"]

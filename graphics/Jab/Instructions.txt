@@ -1,0 +1,5 @@
+-Frames 1-20 are the single jab
+
+-Frames 21-69 are both punches
+
+-Frame 12 is identical to 31, and would be the transition from the single punch to the second

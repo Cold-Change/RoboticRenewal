@@ -1,0 +1,6 @@
+res://Views/TitleView.tscn
+res://Scenes/world.tscn
+res://Scenes/Enemy.tscn
+res://Scenes/arena.tscn
+res://Scenes/Roomie.tscn
+res://Views/intro_cutscene.tscn

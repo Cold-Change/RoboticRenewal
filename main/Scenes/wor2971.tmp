@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://mfip5584vtgb"]
+
+[ext_resource type="PackedScene" uid="uid://d4i6hks13307e" path="res://Scenes/arena.tscn" id="1_mjoc8"]
+[ext_resource type="PackedScene" uid="uid://bemrencxw7yku" path="res://Scenes/player.tscn" id="2_w2ofs"]
+[ext_resource type="PackedScene" uid="uid://boshe2ph0s1sm" path="res://Scenes/enemy.tscn" id="3_e763h"]
+[ext_resource type="Resource" uid="uid://bq1mqy4flwoan" path="res://Resources/SlowEnemyMovementData.tres" id="4_5un3r"]
+[ext_resource type="Script" path="res://Scenes/SpawnMoreEnemies.gd" id="5_p4dj5"]
+
+[node name="World" type="Node2D"]
+y_sort_enabled = true
+
+[node name="SpawnMoreEnemies" type="Node" parent="."]
+script = ExtResource("5_p4dj5")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+z_index = -15
+position = Vector2(6.10352e-05, -325.053)
+scale = Vector2(1, 1.4216)
+color = Color(0.34057, 0.752205, 0.901456, 1)
+polygon = PackedVector2Array(-680, -179, 3454, -192, 3497, 771, -786, 771)
+
+[node name="Arena" parent="." instance=ExtResource("1_mjoc8")]
+
+[node name="Player" parent="." instance=ExtResource("2_w2ofs")]
+position = Vector2(81, 623)
+
+[node name="Label" type="Label" parent="Player"]
+offset_left = -75.0
+offset_top = -200.0
+offset_right = 124.0
+offset_bottom = -99.0
+text = "Space to attack
+WASD or Arrows to move
+Shift to sprint
+E to spawn more enemies"
+
+[node name="Enemy" parent="." instance=ExtResource("3_e763h")]
+position = Vector2(987, 482)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_e763h")]
+position = Vector2(669, 587)
+movement_data = ExtResource("4_5un3r")
+
+[node name="Enemy3" parent="." instance=ExtResource("3_e763h")]
+position = Vector2(1193, 499)
+
+[node name="Enemy4" parent="." instance=ExtResource("3_e763h")]
+position = Vector2(875, 604)
+movement_data = ExtResource("4_5un3r")

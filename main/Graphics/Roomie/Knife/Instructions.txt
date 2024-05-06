@@ -1,0 +1,6 @@
+-Single attack is frames 2-20
+-Double attack w/ return to idle is frames 21-42
+-Looping attack is frame 43-61.
+	-Loop frame 61 to 43 if the attack continues.
+	-Link frame 46 to frame 8 to transition to idle pose from first attack.
+	-Link frame 54 to frame 34 to transition to idle pose from second attack.
